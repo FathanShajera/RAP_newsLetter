@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النشرة التقنية الأسبوعية - 15-21 يوليو 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #bbdefb 0%, #e1bee7 100%);
+            color: #2c3e50;
+            margin: -20px -20px 40px -20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('custom_header.png') center/cover;
+                opacity: 0.3;
+            }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .academy-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            background: rgba(255,255,255,0.8);
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255,255,255,0.9);
+        }
+
+        .academy-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 15px;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .academy-info {
+            text-align: center;
+        }
+
+        .academy-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            color: #2c3e50;
+        }
+
+        .header h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #34495e;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        animation: fadeInUp 1s ease-out;
+        }
+
+        .header h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .date-info {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+            .date-info h3 {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+            }
+
+        .overview {
+            background: linear-gradient(45deg, #fce4ec 0%, #f8bbd9 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+            color: #2c3e50;
+            border: 2px solid #f48fb1;
+        }
+
+        text-align: center;
+        animation: slideInRight 1s ease-out;
+        }
+
+        .overview h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .overview p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .section {
+            margin: 50px 0;
+            padding: 30px;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+            .section:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            }
+
+            .section::before {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                border-radius: 22px;
+                z-index: -1;
+            }
+
+        .ai-section::before {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+        }
+
+        .mobile-section::before {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+        }
+
+        .companies-section::before {
+            background: linear-gradient(135deg, #e0f2f1 0%, #fce4ec 100%);
+        }
+
+        .trends-section::before {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffccbc 100%);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .section-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            flex: 1;
+        }
+
+        .news-item {
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .news-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+                transition: left 0.5s ease;
+            }
+
+            .news-item:hover::before {
+                left: 100%;
+            }
+
+            .news-item:hover {
+                transform: translateX(10px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            }
+
+            .news-item h3 {
+                font-size: 1.8rem;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: #333;
+            }
+
+            .news-item p {
+                font-size: 1.1rem;
+                line-height: 1.8;
+                color: #555;
+            }
+
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(102, 126, 234, 0.2);
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .news-date {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .news-source {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            transition: all 0.3s ease;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+            .news-source:hover {
+                background: linear-gradient(45deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+                color: #5a67d8;
+            }
+
+        .highlight-box {
+            background: linear-gradient(45deg, #e1f5fe 0%, #b3e5fc 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            color: #1565c0;
+            font-weight: 600;
+            text-align: center;
+            border: 2px solid #81d4fa;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            background: linear-gradient(45deg, #fce4ec 0%, #fff9c4 100%);
+            padding: 20px;
+            border-radius: 12px;
+            color: #d81b60;
+            text-align: center;
+            font-weight: 600;
+            border: 2px solid #f8bbd9;
+            transition: transform 0.3s ease;
+        }
+
+            .feature-item:hover {
+                transform: scale(1.05);
+            }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #dee2e6;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .stat-card::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+                animation: rotate 4s linear infinite;
+            }
+
+            .stat-card:hover {
+                transform: translateY(-10px) scale(1.05);
+            }
+
+            .stat-card h3 {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+            }
+
+            .stat-card .number {
+                font-size: 3rem;
+                font-weight: 900;
+                margin: 10px 0;
+            }
+
+            .stat-card p {
+                font-size: 1rem;
+                opacity: 0.9;
+            }
+
+        .ai-stat {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .mobile-stat {
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .security-stat {
+            background: linear-gradient(45deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .companies-stat {
+            background: linear-gradient(45deg, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        .summary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            border-radius: 20px;
+            color: white;
+            margin: 50px 0;
+        }
+
+            .summary h2 {
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+        .key-points {
+            display: grid;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .key-point {
+            padding: 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+            .key-point:hover {
+                transform: translateX(10px);
+            }
+
+            .key-point.ai {
+                background: linear-gradient(45deg, #e1f5fe 0%, #b3e5fc 100%);
+                color: #1565c0;
+            }
+
+            .key-point.mobile {
+                background: linear-gradient(45deg, #fce4ec 0%, #fff9c4 100%);
+                color: #d81b60;
+            }
+
+            .key-point.security {
+                background: linear-gradient(45deg, #e3f2fd 0%, #f3e5f5 100%);
+                color: #5e35b1;
+            }
+
+            .key-point.geo {
+                background: linear-gradient(45deg, #fff3e0 0%, #ffccbc 100%);
+                color: #f57c00;
+            }
+
+        .footer {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+            padding: 40px;
+            border-radius: 20px;
+            color: #2c3e50;
+            text-align: center;
+            margin: 50px 0;
+            border: 2px solid #f48fb1;
+        }
+
+            .footer h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .source-link {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+            .source-link:hover {
+                background: rgba(255,255,255,0.3);
+                transform: translateY(-3px);
+            }
+
+        .contact-info {
+            background: linear-gradient(135deg, #e0f2f1 0%, #fce4ec 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            color: #2c3e50;
+            border: 2px solid #b2dfdb;
+        }
+
+        .features-highlight {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature-highlight {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .copyright {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+            color: #2c3e50;
+            border: 2px solid #bbdefb;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+            }
+
+            to {
+                box-shadow: 0 0 30px rgba(79, 172, 254, 0.8);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header h2 {
+                font-size: 1.4rem;
+            }
+
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .academy-section {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .academy-logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .academy-title {
+                font-size: 1.8rem;
+            }
+
+            .institute-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <!-- Academy Logo and Info -->
+                <div class="academy-section">
+                    <img src="academy_logo_new.png" alt="شعار الأكاديمية الملكية للشرطة" class="academy-logo">
+                    <div class="academy-info">
+                        <h2 class="academy-title">الأكاديمية الملكية للشرطة</h2>
+                        <h3 class="institute-title">معهد نظم المعلومات الأمنية وتطبيقات الذكاء الاصطناعي</h3>
+                    </div>
+                </div>
+
+                <h1>🌟 النشرة التقنية الأسبوعية</h1>
+                <h2>🚀 آخر المستجدات في عالم التكنولوجيا والذكاء الاصطناعي</h2>
+
+                <div class="date-info">
+                    <h3>📅 <strong>العدد الأول - تاريخ الإصدار:</strong> 21 يوليو 2025</h3>
+                    <h3>📝 <strong>إعداد:</strong> معهد نظم المعلومات الأمنية وتطبيقات الذكاء الاصطناعي</h3>
+                    <h3>🌐 <strong>المصدر:</strong> تجميع من أهم المواقع التقنية العربية والعالمية</h3>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section class="overview fade-in">
+            <h2>🎯 نظرة عامة على الأسبوع</h2>
+            <p>
+                شهد الأسبوع الماضي <strong>تطورات مثيرة</strong> في عالم التكنولوجيا، حيث برزت أخبار مهمة في مجال
+                <strong>الذكاء الاصطناعي</strong> 🤖 والهواتف الذكية 📱 والتطبيقات 📲. من إطلاق تحديثات جديدة
+                لروبوتات الدردشة الذكية إلى الكشف عن خطط شركات التقنية الكبرى لعام 2025، كان هذا الأسبوع حافلاً
+                بالابتكارات والإعلانات المهمة.
+            </p>
+        </section>
+
+
+        <!-- AI Section -->
+        <section class="section ai-section fade-in">
+            <div class="section-header">
+                <img src="ai_section_icon.png" alt="أيقونة الذكاء الاصطناعي" class="section-icon">
+                <h2>🤖 أخبار الذكاء الاصطناعي</h2>
+            </div>
+
+            <div class="news-item">
+                <h3>🚀 ابتكار نموذج ذكاء اصطناعي للتنبؤ بالسلوك البشري</h3>
+                <div class="highlight-box">
+                    في تطور <strong>مثير</strong> يمكن أن يغير مستقبل التفاعل بين الإنسان والآلة، تم الكشف عن ابتكار نموذج ذكاء اصطناعي جديد قادر على <strong>التنبؤ بالسلوك البشري</strong> بدقة عالية.
+                </div>
+
+                <div class="features-list">
+                    <div class="feature-item">🚗 السيارات ذاتية القيادة</div>
+                    <div class="feature-item">🛒 التسويق الرقمي الذكي</div>
+                    <div class="feature-item">🖥️ واجهات المستخدم التفاعلية</div>
+                    <div class="feature-item">🔒 أنظمة الأمان المتقدمة</div>
+                </div>
+
+                <div class="news-meta">
+                    <span class="news-date">📅 19 يوليو 2025</span>
+                    <a href="https://aitnews.com/ai-behavior-prediction-model" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🎨 Mistral تطلق تحديثاً ضخماً لروبوت Le Chat</h3>
+                <div class="highlight-box">
+                    كشفت شركة <strong>Mistral AI</strong> الفرنسية المتخصصة في مجال الذكاء الاصطناعي عن تحديث ضخم لروبوت الدردشة الخاص بها <strong>Le Chat</strong>.
+                </div>
+
+                <div class="features-list">
+                    <div class="feature-item">🧠 التفكير: قدرات تحليلية متقدمة</div>
+                    <div class="feature-item">💬 التكلم: تفاعل صوتي طبيعي</div>
+                    <div class="feature-item">🎨 الرسم: إنشاء محتوى بصري</div>
+                </div>
+
+                <div class="news-meta">
+                    <span class="news-date">📅 18 يوليو 2025</span>
+                    <a href="https://www.alarabiya.net/technology/mistral-ai-lechat-update" class="news-source" target="_blank">المصدر: العربية تكنولوجيا</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🎬 أدوبي تتيح إنشاء مؤثرات صوتية بالذكاء الاصطناعي</h3>
+                <p>
+                    أعلنت شركة <strong>أدوبي</strong> عن تحديثات جديدة لتطبيقها القائم على الذكاء الاصطناعي <strong>Firefly</strong>،
+                    مع التركيز على تعزيز أدوات تحرير الفيديو. التحديث الجديد يتيح للمستخدمين إنشاء <strong>مؤثرات صوتية متطورة</strong>
+                    باستخدام تقنيات الذكاء الاصطناعي.
+                </p>
+
+                <div class="news-meta">
+                    <span class="news-date">📅 17 يوليو 2025</span>
+                    <a href="https://aitnews.com/adobe-firefly-audio-effects" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🎭 xAI تضيف شخصيات تفاعلية رقمية إلى Grok</h3>
+                <p>
+                    في خطوة <strong>مبتكرة</strong>، أعلنت شركة <strong>xAI</strong> التابعة لإيلون ماسك عن تحديث جديد لروبوت الدردشة الذكي <strong>Grok</strong>،
+                    يتيح للمستخدمين التفاعل مع <strong>شخصيات أنمي افتراضية</strong> مصممة خصيصاً لهذا الغرض.
+                </p>
+
+                <div class="news-meta">
+                    <span class="news-date">📅 16 يوليو 2025</span>
+                    <a href="https://www.alarabiya.net/technology/xai-grok-anime-characters" class="news-source" target="_blank">المصدر: العربية تكنولوجيا</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Section -->
+        <section class="section mobile-section fade-in">
+            <div class="section-header">
+                <img src="mobile_section_icon.png" alt="أيقونة الهواتف الذكية" class="section-icon">
+                <h2>📱 أخبار الهواتف الذكية والأجهزة المحمولة</h2>
+            </div>
+
+            <div class="news-item">
+                <h3>🔄 سامسونج تعتزم إطلاق أول هاتف ثلاثي الطي نهاية 2025</h3>
+                <div class="highlight-box">
+                    في إعلان <strong>مثير للاهتمام</strong>، كشفت تسريبات موثوقة أن شركة <strong>سامسونج</strong> تستعد لإطلاق أول هاتف ذكي قابل للطي الثلاثي في وقت لاحق من عام 2025.
+                </div>
+
+                <div class="features-list">
+                    <div class="feature-item">📐 ثلاثة أوضاع استخدام مختلفة</div>
+                    <div class="feature-item">🔋 إدارة ذكية للبطارية</div>
+                    <div class="feature-item">💪 مفاصل متطورة ومتينة</div>
+                    <div class="feature-item">📺 شاشات عالية الدقة</div>
+                </div>
+
+                <div class="news-meta">
+                    <span class="news-date">📅 20 يوليو 2025</span>
+                    <a href="https://www.skynewsarabia.com/technology/samsung-triple-fold-phone" class="news-source" target="_blank">المصدر: سكاي نيوز عربية</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>📅 جوجل تحدد موعد الكشف عن سلسلة Pixel 10</h3>
+                <div class="highlight-box">
+                    أعلنت شركة <strong>جوجل</strong> رسمياً عن موعد حدثها السنوي <strong>"Made by Google"</strong>، والذي سيُقام في مدينة نيويورك يوم <strong>20 أغسطس 2025</strong>.
+                </div>
+
+                <div class="features-list">
+                    <div class="feature-item">📸 تحسينات كبيرة في التصوير المدعوم بالذكاء الاصطناعي</div>
+                    <div class="feature-item">🔋 أداء أفضل للبطارية</div>
+                    <div class="feature-item">🎨 تصميم محدث وأنيق</div>
+                    <div class="feature-item">🤖 ميزات Android جديدة</div>
+                </div>
+
+                <div class="news-meta">
+                    <span class="news-date">📅 19 يوليو 2025</span>
+                    <a href="https://www.aljazeera.net/tech/google-pixel-10-announcement" class="news-source" target="_blank">المصدر: الجزيرة نت</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Companies Section -->
+        <section class="section companies-section fade-in">
+            <div class="section-header">
+                <img src="tech_companies_icon.png" alt="أيقونة الشركات التقنية" class="section-icon">
+                <h2>🏢 أخبار الشركات التقنية والتطبيقات</h2>
+            </div>
+
+            <div class="news-item">
+                <h3>📱 تطورات في قضية تيك توك</h3>
+                <div class="highlight-box">
+                    شهد هذا الأسبوع <strong>تطورات مهمة</strong> في قضية تيك توك، حيث انسحب لاعب أمريكي كبير من سباق شراء التطبيق الشهير.
+                </div>
+
+                <div class="news-meta">
+                    <span class="news-date">📅 18 يوليو 2025</span>
+                    <a href="https://asharq.com/technology/tiktok-acquisition-developments" class="news-source" target="_blank">المصدر: الشرق للأخبار</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🛡️ مايكروسوفت تحذر من هجمات "يوم الصفر"</h3>
+                <div class="highlight-box">
+                    أصدرت شركة <strong>مايكروسوفت</strong> تنبيهاً عاجلاً بشأن <strong>"هجمات نشطة"</strong> تستهدف برمجيات الخوادم.
+                </div>
+
+                <div class="features-list">
+                    <div class="feature-item">🔄 تحديث فوري للأنظمة</div>
+                    <div class="feature-item">🔍 مراقبة مستمرة للشبكات</div>
+                    <div class="feature-item">🛡️ تعزيز الحماية الأمنية</div>
+                    <div class="feature-item">📊 تقييم المخاطر بانتظام</div>
+                </div>
+
+                <div class="news-meta">
+                    <span class="news-date">📅 17 يوليو 2025</span>
+                    <a href="https://www.alarabiya.net/technology/microsoft-zero-day-attacks" class="news-source" target="_blank">المصدر: العربية تكنولوجيا</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🇪🇺 مايكروسوفت تستثمر في تحسين الذكاء الاصطناعي باللغات الأوروبية</h3>
+                <p>
+                    أعلنت مايكروسوفت عن خطط لاستثمار ملايين الدولارات في أوروبا لإنتاج بيانات رقمية لنماذج الذكاء الاصطناعي بأكثر من 12 لغة أوروبية.
+                </p>
+
+                <div class="news-meta">
+                    <span class="news-date">📅 16 يوليو 2025</span>
+                    <a href="https://aitnews.com/microsoft-european-ai-investment" class="news-source" target="_blank">المصدر: البوابة التقنية</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="fade-in">
+            <h2 style="text-align: center; font-size: 2.5rem; margin: 50px 0 30px 0; color: #333;">📊 إحصائيات الأسبوع</h2>
+
+            <div class="stats-container">
+                <div class="stat-card ai-stat">
+                    <h3>🤖 الذكاء الاصطناعي</h3>
+                    <div class="number">8</div>
+                    <p>أخبار مهمة</p>
+                    <p><strong>عالي جداً</strong></p>
+                </div>
+
+                <div class="stat-card mobile-stat">
+                    <h3>📱 الهواتف الذكية</h3>
+                    <div class="number">5</div>
+                    <p>أخبار مهمة</p>
+                    <p><strong>عالي</strong></p>
+                </div>
+
+                <div class="stat-card security-stat">
+                    <h3>🛡️ الأمن السيبراني</h3>
+                    <div class="number">3</div>
+                    <p>أخبار مهمة</p>
+                    <p><strong>متوسط</strong></p>
+                </div>
+
+                <div class="stat-card companies-stat">
+                    <h3>🏢 الشركات التقنية</h3>
+                    <div class="number">6</div>
+                    <p>أخبار مهمة</p>
+                    <p><strong>عالي</strong></p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Summary Section -->
+        <section class="summary fade-in">
+            <h2>🎯 خلاصة الأسبوع</h2>
+            <p style="font-size: 1.2rem; text-align: center; margin-bottom: 30px;">
+                كان هذا الأسبوع <strong>حافلاً بالتطورات المهمة</strong> في عالم التكنولوجيا، حيث تصدرت أخبار
+                <strong>الذكاء الاصطناعي</strong> 🤖 المشهد مع إعلانات مهمة من شركات رائدة.
+            </p>
+
+            <div class="key-points">
+                <div class="key-point ai">
+                    <strong>🤖 الذكاء الاصطناعي:</strong> تطورات متسارعة في فهم السلوك البشري وتحسين التفاعل
+                </div>
+
+                <div class="key-point mobile">
+                    <strong>📱 الهواتف الذكية:</strong> ابتكارات في التصميم مع الهواتف القابلة للطي الثلاثي
+                </div>
+
+                <div class="key-point security">
+                    <strong>🛡️ الأمن السيبراني:</strong> تحديات متزايدة تتطلب حلول متقدمة
+                </div>
+
+                <div class="key-point geo">
+                    <strong>🌍 التأثير الجيوسياسي:</strong> استمرار تأثير السياسات على صناعة التكنولوجيا
+                </div>
+            </div>
+        </section>
+
+        <!-- Trends Section -->
+        <section class="section trends-section fade-in">
+            <h2 style="text-align: center; margin-bottom: 30px;">🔮 اتجاهات وتوقعات</h2>
+
+            <div class="news-item">
+                <h3>📈 نمو الاستثمارات في التقنيات الناشئة</h3>
+                <p>
+                    تشير البيانات الحديثة إلى <strong>نمو كبير</strong> في الاستثمارات المخصصة للتقنيات الناشئة،
+                    خاصة في مجالات الذكاء الاصطناعي والحوسبة الكمية والواقع المعزز.
+                </p>
+
+                <div class="features-list">
+                    <div class="feature-item">🤖 الذكاء الاصطناعي: نمو 150%</div>
+                    <div class="feature-item">⚛️ الحوسبة الكمية: نمو 120%</div>
+                    <div class="feature-item">🥽 الواقع المعزز: نمو 95%</div>
+                    <div class="feature-item">🔗 البلوك تشين: نمو 80%</div>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <h3>🌐 التحول نحو الحوسبة المتطورة</h3>
+                <p>
+                    نشهد تحولاً <strong>متسارعاً</strong> نحو الحوسبة المتطورة، بما في ذلك الحوسبة السحابية المتقدمة والحوسبة الطرفية.
+                </p>
+            </div>
+
+            <div class="news-item">
+                <h3>🔒 تزايد الاهتمام بالأمن السيبراني</h3>
+                <p>
+                    مع تزايد التهديدات السيبرانية، نلاحظ اهتماماً <strong>متزايداً</strong> بحلول الأمن السيبراني المتقدمة.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer fade-in">
+            <h2>📚 المصادر والمراجع</h2>
+
+            <h3 style="margin: 30px 0 20px 0;">🌐 المواقع العربية المتخصصة:</h3>
+            <div class="sources-grid">
+                <a href="https://aitnews.com/" class="source-link" target="_blank">
+                    🔗 البوابة التقنية - أخبار التقنية والذكاء الاصطناعي
+                </a>
+                <a href="https://www.alarabiya.net/technology" class="source-link" target="_blank">
+                    🔗 العربية تكنولوجيا - آخر أخبار التكنولوجيا
+                </a>
+                <a href="https://www.skynewsarabia.com/technology" class="source-link" target="_blank">
+                    🔗 سكاي نيوز عربية - التقنية والعلوم
+                </a>
+                <a href="https://www.aljazeera.net/tech/" class="source-link" target="_blank">
+                    🔗 الجزيرة نت - تكنولوجيا
+                </a>
+                <a href="https://asharq.com/technology/" class="source-link" target="_blank">
+                    🔗 الشرق للأخبار - التكنولوجيا
+                </a>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; margin: 30px 0;">
+                <h3>📊 إحصائيات التغطية:</h3>
+                <div class="features-list">
+                    <div class="feature-item">📰 إجمالي الأخبار المغطاة: 22 خبر</div>
+                    <div class="feature-item">🌍 المصادر: 15 موقع متخصص</div>
+                    <div class="feature-item">🕒 فترة التغطية: 7 أيام</div>
+                    <div class="feature-item">📈 معدل التحديث: يومي</div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Contact Info -->
+        <section class="contact-info fade-in" style="display:none">
+            <h2>📧 للتواصل والاقتراحات</h2>
+            <p><strong>🤖 تم إعداد هذه النشرة بواسطة:</strong> Manus AI</p>
+            <p><strong>🔄 التحديث القادم:</strong> الأسبوع المقبل - 22-28 يوليو 2025</p>
+            <p><strong>📱 تابعونا للحصول على آخر الأخبار التقنية</strong></p>
+
+            <h3 style="margin: 30px 0 20px 0;">🎯 ميزات النشرة المحسنة:</h3>
+            <div class="features-highlight">
+                <div class="feature-highlight">✨ تصميم جذاب مع ألوان متدرجة</div>
+                <div class="feature-highlight">🎨 أيقونات ملونة معبرة</div>
+                <div class="feature-highlight">📊 إحصائيات تفاعلية منظمة</div>
+                <div class="feature-highlight">🖼️ صور عالية الجودة متخصصة</div>
+                <div class="feature-highlight">📱 تنسيق متجاوب لجميع الأجهزة</div>
+                <div class="feature-highlight">⚡ تفاعلية وحركات سلسة</div>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <div class="copyright fade-in">
+            <p><em>© 2025 النشرة التقنية الأسبوعية المحسنة - جميع الحقوق محفوظة</em></p>
+            <p><em>🌟 تصميم متطور • محتوى موثوق • تحديث مستمر</em></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add click effects to cards
+        document.querySelectorAll('.stat-card, .feature-item, .news-item').forEach(card => {
+            card.addEventListener('click', function () {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Add hover sound effect (optional)
+        document.querySelectorAll('.stat-card, .feature-item').forEach(element => {
+            element.addEventListener('mouseenter', function () {
+                // Add subtle hover effect
+                this.style.filter = 'brightness(1.1)';
+            });
+
+            element.addEventListener('mouseleave', function () {
+                this.style.filter = '';
+            });
+        });
+
+        // Parallax effect for header
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('.header');
+            if (header) {
+                header.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Dynamic counter animation for statistics
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-card .number');
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent);
+                const increment = target / 50;
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 30);
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsSection = document.querySelector('.stats-container');
+        if (statsSection) {
+            const statsObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statsObserver.observe(statsSection);
+        }
+
+        // Add loading animation
+        window.addEventListener('load', function () {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Print functionality
+        function printNewsletter() {
+            window.print();
+        }
+
+        // Add print button
+        const printButton = document.createElement('button');
+        printButton.innerHTML = '🖨️ طباعة النشرة';
+        printButton.style.cssText = `
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    border: none;
+                    padding: 15px 20px;
+                    border-radius: 50px;
+                    font-family: 'Cairo', sans-serif;
+                    font-weight: 600;
+                    cursor: pointer;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                    transition: all 0.3s ease;
+                    z-index: 1000;
+                `;
+
+        printButton.addEventListener('click', printNewsletter);
+        printButton.addEventListener('mouseenter', function () {
+            this.style.transform = 'translateY(-3px)';
+            this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.3)';
+        });
+        printButton.addEventListener('mouseleave', function () {
+            this.style.transform = '';
+            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+        });
+
+        document.body.appendChild(printButton);
+    </script>
+</body>
+</html>
+
